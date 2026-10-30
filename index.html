@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Líder Vistorias — Vistorias em imóveis com laudo digital</title>
+  <meta name="description" content="Agende vistorias de entrada, saída, periódica, constatação, pré-compra e entrega de obra. Laudo digital com fotos e assinatura.">
+  <meta name="theme-color" id="themeColor" content="#0b0a08">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>try{var t=localStorage.getItem('lv.theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="aura" aria-hidden="true"><i></i><i></i></div>
+
+  <!-- barra superior (desktop) / cabeçalho -->
+  <header class="topbar" id="topbar">
+    <a href="#inicio" class="mark" aria-label="Líder Vistorias — início">
+      <img src="/.netlify/images?url=/img/lider-emblema.png&w=96&fm=webp" width="40" height="51" alt="">
+      <span><b>Líder</b> Vistorias</span>
+    </a>
+    <nav class="toplinks" aria-label="Seções">
+      <a href="#inicio" data-tab="inicio">Início</a>
+      <a href="#solicitar" data-tab="solicitar">Solicitar</a>
+      <a href="#acompanhar" data-tab="acompanhar">Acompanhar</a>
+      <a href="#ajuda" data-tab="ajuda">Ajuda</a>
+      <a href="#painel" data-tab="painel" class="only-admin" hidden>Painel</a>
+    </nav>
+    <div class="tools">
+      <button type="button" class="rbtn" id="themeToggle" aria-label="Alternar tema"><svg class="ic"><use id="themeIcon" href="#i-moon"/></svg></button>
+      <a class="btn gold sm hide-m" href="#solicitar" data-start="entrada">Agendar</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- INÍCIO -->
+    <section id="view-inicio" class="view" aria-label="Início">
+      <div class="hero" id="hero">
+        <picture class="hero-bg">
+          <source media="(min-width:900px)" srcset="/.netlify/images?url=/img/hero-interior.jpg&w=1400&fm=webp">
+          <img src="/.netlify/images?url=/img/hero-interior.jpg&w=820&fm=webp" alt="" fetchpriority="high">
+        </picture>
+        <div class="hero-in">
+          <p class="date" id="today">Hoje</p>
+          <h1 class="brand"><img src="/.netlify/images?url=/img/lider-horizontal.png&w=760&fm=webp" width="1200" height="576" alt="Líder Vistorias — Vistorias em Imóveis"></h1>
+          <h2 class="display">Cada detalhe do seu imóvel, <em>documentado com precisão.</em></h2>
+          <p class="lead">Escolha o serviço, a data e envie o pedido em menos de 2 minutos. O responsável confirma com você pelo WhatsApp.</p>
+          <div class="hero-cta">
+            <a class="btn gold" href="#solicitar" data-start="entrada">Solicitar vistoria <svg class="ic s"><use href="#i-arrow"/></svg></a>
+            <a class="btn glass" href="#acompanhar"><svg class="ic s"><use href="#i-search"/></svg>Acompanhar pedido</a>
+          </div>
+          <ul class="chips">
+            <li><svg class="ic s"><use href="#i-cam"/></svg>Laudo com fotos</li>
+            <li><svg class="ic s"><use href="#i-pen"/></svg>Assinatura digital</li>
+            <li><svg class="ic s"><use href="#i-wa"/></svg>Atendimento no WhatsApp</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="marquee" aria-hidden="true"><div>
+        <span>Vistoria de entrada</span><span>Vistoria de saída</span><span>Periódica</span><span>Constatação</span><span>Pré-compra</span><span>Entrega de obra</span>
+        <span>Vistoria de entrada</span><span>Vistoria de saída</span><span>Periódica</span><span>Constatação</span><span>Pré-compra</span><span>Entrega de obra</span>
+      </div></div>
+
+      <div class="sec reveal"><div><p class="eb">Serviços</p><h2>O que podemos vistoriar</h2></div><a href="#solicitar" data-start="entrada" class="link">Ver todos <svg class="ic s"><use href="#i-arrow"/></svg></a></div>
+      <div class="rail" id="rail"></div>
+
+      <div class="split reveal">
+        <figure class="split-img">
+          <img src="/.netlify/images?url=/img/inspecao-detalhe.jpg&w=900&fm=webp" alt="Vistoriador registrando detalhes de uma cozinha com tablet e câmera" loading="lazy">
+          <figcaption><svg class="ic s"><use href="#i-shield"/></svg>Registro técnico e imparcial</figcaption>
+        </figure>
+        <div>
+          <p class="eb">O laudo</p>
+          <h2 class="h2">Um retrato fiel do imóvel, <em>ambiente por ambiente.</em></h2>
+          <ul class="checks">
+            <li><svg class="ic s"><use href="#i-check"/></svg><span><b>Fotos de cada ambiente</b>Paredes, pisos, esquadrias, louças e metais.</span></li>
+            <li><svg class="ic s"><use href="#i-check"/></svg><span><b>Estado de conservação descrito</b>Avarias, desgastes e funcionamento de itens.</span></li>
+            <li><svg class="ic s"><use href="#i-check"/></svg><span><b>Documento digital assinado</b>Fácil de compartilhar com todas as partes.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sec reveal"><div><p class="eb">Processo</p><h2>Como funciona</h2></div></div>
+      <ol class="steps-tl reveal">
+        <li><span class="n">01</span><div><b>Você solicita</b><p>Preencha o pedido em três etapas rápidas, direto pelo celular.</p></div></li>
+        <li><span class="n">02</span><div><b>O responsável confirma</b><p>Data, horário e acesso ao imóvel são alinhados com você.</p></div></li>
+        <li><span class="n">03</span><div><b>Você recebe o laudo</b><p>Documento digital com fotos e assinatura, pronto para compartilhar.</p></div></li>
+      </ol>
+
+      <div class="sec reveal"><div><p class="eb">Para quem</p><h2>Feito para cada lado do contrato</h2></div></div>
+      <div class="who reveal">
+        <article><svg class="ic l"><use href="#i-key"/></svg><b>Inquilinos</b><p>Segurança na entrada e tranquilidade na devolução.</p></article>
+        <article><svg class="ic l"><use href="#i-home"/></svg><b>Proprietários</b><p>Patrimônio documentado antes e depois de cada locação.</p></article>
+        <article><svg class="ic l"><use href="#i-briefcase"/></svg><b>Corretores e imobiliárias</b><p>Agilidade para fechar contratos sem pendências.</p></article>
+        <article><svg class="ic l"><use href="#i-shield"/></svg><b>Compradores</b><p>Confira o imóvel antes de assinar a compra.</p></article>
+      </div>
+
+      <div class="band reveal">
+        <img src="/.netlify/images?url=/img/fachada-noite.jpg&w=1200&fm=webp" alt="" loading="lazy">
+        <div>
+          <p class="eb">Pronto para agendar?</p>
+          <h2 class="h2">Sua vistoria começa <em>em poucos toques.</em></h2>
+          <div class="hero-cta">
+            <a class="btn gold" href="#solicitar" data-start="entrada">Solicitar agora</a>
+            <a class="btn glass" id="waTalk" href="#" target="_blank" rel="noopener"><svg class="ic s"><use href="#i-wa"/></svg>Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <footer class="foot">
+        <img src="/.netlify/images?url=/img/lider-horizontal.png&w=360&fm=webp" width="180" height="86" alt="Líder Vistorias" loading="lazy">
+        <p>© <span id="yr">2026</span> Líder Vistorias · Vistorias em imóveis</p>
+        <a href="#painel" class="foot-admin"><svg class="ic s"><use href="#i-lock"/></svg>Área do responsável</a>
+      </footer>
+    </section>
+
+    <!-- SOLICITAR -->
+    <section id="view-solicitar" class="view" hidden aria-label="Solicitar vistoria">
+      <header class="head"><p class="eb">Novo pedido</p><h1 class="lg">Solicitar <em>vistoria</em></h1></header>
+      <div id="flow">
+        <ol class="prog" aria-label="Etapas">
+          <li data-n="1"><i></i><span>Serviço</span></li>
+          <li data-n="2"><i></i><span>Endereço e agenda</span></li>
+          <li data-n="3"><i></i><span>Seus dados</span></li>
+        </ol>
+        <div id="steps"></div>
+        <div class="nav">
+          <button type="button" class="btn ghost" id="back" hidden><svg class="ic s"><use href="#i-back"/></svg>Voltar</button>
+          <button type="button" class="btn gold" id="next">Continuar <svg class="ic s"><use href="#i-arrow"/></svg></button>
+          <button type="button" class="btn gold" id="send" hidden><svg class="ic s"><use href="#i-send"/></svg>Enviar pedido</button>
+        </div>
+        <p class="fine" id="sendHint" hidden>Ao enviar, o pedido é registrado e você pode encaminhá-lo ao responsável pelo WhatsApp.</p>
+      </div>
+      <div id="done" hidden></div>
+    </section>
+
+    <!-- ACOMPANHAR -->
+    <section id="view-acompanhar" class="view" hidden aria-label="Acompanhar pedido">
+      <header class="head"><p class="eb">Status</p><h1 class="lg">Acompanhar <em>pedido</em></h1></header>
+      <form class="card col" id="trackForm" novalidate>
+        <p class="muted">Use o protocolo recebido ao enviar o pedido e os 4 últimos dígitos do WhatsApp informado.</p>
+        <div class="two">
+          <div class="field"><label for="t-prot">Protocolo</label><input class="in mono" id="t-prot" placeholder="LV-XXXXXX" autocomplete="off" autocapitalize="characters" required></div>
+          <div class="field"><label for="t-tel">Final do WhatsApp</label><input class="in mono" id="t-tel" inputmode="numeric" maxlength="4" placeholder="0000" required></div>
+        </div>
+        <button class="btn gold" type="submit"><svg class="ic s"><use href="#i-search"/></svg>Consultar</button>
+      </form>
+      <div id="trackResult"></div>
+      <div class="sec"><div><p class="eb">Neste aparelho</p><h2>Meus pedidos</h2></div></div>
+      <div id="mine" class="list"></div>
+    </section>
+
+    <!-- AJUDA -->
+    <section id="view-ajuda" class="view" hidden aria-label="Ajuda">
+      <header class="head"><p class="eb">Dúvidas</p><h1 class="lg">Central de <em>ajuda</em></h1></header>
+
+      <div class="card prep" id="prep">
+        <div class="prep-h"><div><p class="eb">Checklist</p><h2>Prepare-se para a vistoria</h2></div><div class="ring" id="prepRing"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="17" class="v" id="prepArc"/></svg><b id="prepPct">0%</b></div></div>
+        <div id="prepList"></div>
+      </div>
+
+      <div class="sec"><div><p class="eb">Perguntas frequentes</p><h2>FAQ</h2></div></div>
+      <div class="faq card flush">
+        <details><summary>Preciso estar no local?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Não. Você não é obrigado a estar presente: a vistoria pode ser feita sem o inquilino. Combine previamente o acesso ao imóvel com o responsável.</p></details>
+        <details><summary>Quais tipos de vistoria posso solicitar?<svg class="ic"><use href="#i-plus"/></svg></summary><p>O app oferece vistoria de entrada, de saída e periódica, constatação, pré-compra e entrega de obra. Escolha a opção que melhor corresponde à sua necessidade.</p></details>
+        <details><summary>Como faço um pedido?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Escolha o tipo de vistoria e imóvel, informe o endereço, selecione uma data e horário disponíveis e preencha seus dados de contato.</p></details>
+        <details><summary>O pedido fica confirmado na hora?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Não necessariamente. A data e o horário precisam ser confirmados pelo responsável. Depois de enviar, toque em “Enviar pelo WhatsApp” para encaminhar o pedido e aguarde o retorno. Você pode consultar o status a qualquer momento na aba Acompanhar.</p></details>
+        <details><summary>Como acompanho meu pedido?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Na aba Acompanhar, informe o protocolo (ex.: LV-AB12CD) e os 4 últimos dígitos do seu WhatsApp. Pedidos feitos neste aparelho aparecem automaticamente em “Meus pedidos”.</p></details>
+        <details><summary>Como é feito o acesso se eu não estiver no imóvel?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Combine antes com o responsável como será a entrada e quem dará acesso. Informe também qualquer orientação importante sobre chaves, portaria ou acesso ao imóvel.</p></details>
+        <details><summary>Como posso me preparar para a vistoria?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Deixe combinado o acesso aos ambientes e às áreas que serão vistoriadas. Se tiver informações relevantes, como reparos ou itens que precisam de atenção, compartilhe com o responsável. Use o checklist acima como guia.</p></details>
+        <details><summary>Quanto tempo leva?<svg class="ic"><use href="#i-plus"/></svg></summary><p>O tempo varia conforme o tamanho e as condições do imóvel e o tipo de vistoria. O responsável pode informar uma estimativa ao confirmar o agendamento.</p></details>
+        <details><summary>O que recebo ao final?<svg class="ic"><use href="#i-plus"/></svg></summary><p>O serviço prevê um laudo digital com fotos e assinatura. Consulte o responsável sobre a entrega e o prazo do seu laudo.</p></details>
+        <details><summary>Posso enviar o laudo de entrada ou outras informações?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Sim. Envie documentos, fotos ou observações diretamente ao responsável pelo WhatsApp para ajudar na realização da vistoria.</p></details>
+        <details><summary>Preciso alterar a data ou o horário?<svg class="ic"><use href="#i-plus"/></svg></summary><p>Fale com o responsável pelo WhatsApp o quanto antes para consultar a disponibilidade de outro horário.</p></details>
+      </div>
+
+      <a class="card contact" id="waHelp" href="#" target="_blank" rel="noopener">
+        <span class="wa-dot"><svg class="ic"><use href="#i-wa"/></svg></span>
+        <span><b>Ainda com dúvidas?</b><small>Fale direto com o responsável pelo WhatsApp</small></span>
+        <svg class="ic s"><use href="#i-arrow"/></svg>
+      </a>
+    </section>
+
+    <!-- PAINEL (responsável) -->
+    <section id="view-painel" class="view" hidden aria-label="Painel do responsável">
+      <header class="head row-h">
+        <div><p class="eb"><svg class="ic s"><use href="#i-lock"/></svg> Área do responsável</p><h1 class="lg">Painel de <em>pedidos</em></h1></div>
+        <div class="head-acts" id="adminActs" hidden>
+          <button type="button" class="rbtn" id="refresh" aria-label="Atualizar"><svg class="ic"><use href="#i-refresh"/></svg></button>
+          <button type="button" class="rbtn" id="csv" aria-label="Exportar planilha"><svg class="ic"><use href="#i-download"/></svg></button>
+          <button type="button" class="rbtn" id="logout" aria-label="Sair"><svg class="ic"><use href="#i-out"/></svg></button>
+        </div>
+      </header>
+      <div id="painel"></div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Navegação"><div class="tabs">
+    <a class="tab" href="#inicio" data-tab="inicio"><svg class="ic"><use href="#i-home"/></svg>Início</a>
+    <a class="tab" href="#solicitar" data-tab="solicitar"><svg class="ic"><use href="#i-cal"/></svg>Solicitar</a>
+    <a class="tab" href="#acompanhar" data-tab="acompanhar"><svg class="ic"><use href="#i-search"/></svg>Acompanhar</a>
+    <a class="tab" href="#ajuda" data-tab="ajuda"><svg class="ic"><use href="#i-help"/></svg>Ajuda</a>
+    <a class="tab only-admin" href="#painel" data-tab="painel" hidden><svg class="ic"><use href="#i-inbox"/></svg>Painel<span class="badge" hidden>0</span></a>
+  </div></nav>
+
+  <a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="sheet" id="sheet"></dialog>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

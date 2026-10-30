@@ -1,0 +1,11 @@
+{
+  "name": "Líder Vistorias",
+  "short_name": "Líder",
+  "description": "Agende vistorias de imóveis com laudo digital.",
+  "lang": "pt-BR",
+  "start_url": "/#inicio",
+  "display": "standalone",
+  "background_color": "#0b0a08",
+  "theme_color": "#0b0a08",
+  "icons": [{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }]
+}
